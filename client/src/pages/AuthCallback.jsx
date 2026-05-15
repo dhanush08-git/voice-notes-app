@@ -14,7 +14,7 @@ export default function AuthCallback() {
     if (token) {
       // Fetch user info using the token
       axios
-        .get("http://localhost:5000/api/auth/me", {
+        .get("http://voice-notes-app-rqja.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {

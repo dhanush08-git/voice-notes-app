@@ -37,7 +37,7 @@ export default function Recorder({ onNewNote, token }) {
         formData.append("audio", blob, "recording.webm");
 
         try {
-          const res = await axios.post("http://localhost:5000/api/notes", formData, {
+          const res = await axios.post("https://voice-notes-app-rqja.onrender.com/api/notes", formData, {
             headers: { Authorization: `Bearer ${token}` },
           });
           onNewNote(res.data);

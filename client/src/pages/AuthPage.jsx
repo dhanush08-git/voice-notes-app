@@ -16,8 +16,8 @@ export default function AuthPage() {
     setLoading(true);
     try {
       const url = isLogin
-        ? "http://localhost:5000/api/auth/login"
-        : "http://localhost:5000/api/auth/register";
+        ? "http://voice-notes-app-rqja.onrender.com/api/auth/login"
+        : "http://voice-notes-app-rqja.onrender.com/api/auth/register";
       const res = await axios.post(url, form);
       login(res.data.token, res.data.user);
       navigate("/");
