@@ -128,11 +128,12 @@ const handleNewNote = (note) => {
   setDrawerOpen(false);
 };
   const handleNoteClick = useCallback((note) => {
-    setSelectedNote(note);
-    setDrawerOpen(false);   // close mobile drawer
-    setMobileView("detail"); // push mobile to detail view
-  }, []);
-
+  setSelectedNote(note);
+  setDrawerOpen(false);
+  if (window.innerWidth < 1024) {
+    setMobileView("detail");
+  }
+}, []);
   const handleBackToHome = () => {
     setMobileView("home");
     setSelectedNote(null);
