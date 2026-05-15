@@ -158,7 +158,7 @@ export default function AuthPage() {
         {/* Google OAuth */}
         <a
           id="google-auth-btn"
-          href="http://localhost:5000/api/auth/google"
+          href="https://voice-notes-app-rqja.onrender.com/api/auth/google"
           className="flex items-center justify-center gap-3 w-full border border-slate-200 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all duration-200"
         >
           <img
